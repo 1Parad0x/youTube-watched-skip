@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Hider",
+  "version": "1.0",
+  "description": "Скрывает видео из рекомендаций YouTube, если вы его уже просматривали.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action":{
+    "default_popup": "settings.html"
+  },
+  "icons":{
+    "128": "logo.png"
+  }
+}

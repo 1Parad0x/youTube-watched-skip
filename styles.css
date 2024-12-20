@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #bb86fc;
+    text-shadow: 0 0 5px rgba(187, 134, 252, 0.3);
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #bdbdbd;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #212121;
+    border: 1px solid #424242;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: '\2713';
+    color: #bb86fc;
+    font-size: 16px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    user-select: none;
+}
+
+input[type="checkbox"]:checked::before {
+   transform: scale(1);
+}
+
+input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100px;
+  box-sizing: border-box;
+}
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #bb86fc;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #9c5af1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:focus, input[type="checkbox"]:focus {
+    outline: 2px solid #7e3af2;
+    outline-offset: 2px;
+}
+
